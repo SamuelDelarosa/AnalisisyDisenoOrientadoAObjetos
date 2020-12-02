@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="CSS/header.css">
+	<link rel="stylesheet" type="text/css" href="CSS/menu2.css">
+	<link rel="stylesheet" type="text/css" href="CSS/main-student.css">
+	<link rel="stylesheet" type="text/css" href="CSS/footer.css">
+	<style type="text/css">
+		body{
+			background: url("img/fondo-body.gif");
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img src="img/logo-ipn.png">
+		<img src="img/logo-escom.png">
+		<div>
+			<h1>Sistema Bibliotecario Digital de la ESCOM</h1>
+			<h1>SBDESCOM</h1>
+		</div>
+	</header>
+	<nav>
+		<ul>
+		<li><a href="#"></a></li>
+		<li>
+			<a ></a>
+			<ul>
+				<li><a href="#">Perfil</a></li>
+				<li><a href="#">Historial de libro</a></li>
+				<li><a href="#">Apartar libro</a></li>
+				<li><a href="#">Consulta de libro</a></li>
+			</ul>
+		</li>
+		<li>
+			<a ></a>
+		</li>
+		<li>
+			<a href="#"></a>
+		</li>
+		</ul>
+	</nav>
+	<main>
+		
+		<div id="perfil">
+			<form id="buscar-libro">
+                        <input type="text" name="titulo-libro" placeholder="T&iacute;tulo">
+                        <input type="text" name="autor-libro" placeholder="Autor">
+                        <input type="text" name="editorial-libro" placeholder="Editorial">
+                        <input type="text" name="isbn" placeholder="ISBN">
+                        <button type="submit">Buscar</button>
+                    </form>
+			<table>
+  			<thead id="tit-tabla-1">
+   			 	
+  			</thead>
+				  <tbody id="cuerpo-tabla-1">
+
+				  </tbody>
+				</table>
+		<form class="formulario-busqueda" id="buscar-TT">
+                        <input type="text" name="Titulo_tt" id="Titulo_tt" placeholder="T&iacute;tulo">
+                        <input type="text" name="N_corto" id="N_corto" placeholder="Nombre corto">
+                        <input type="text" name="Num_tt" id="Num_tt" placeholder="N&uacute;mero de TT">
+                        <input type="text" name="Autor_al" id="Autor_al" placeholder="Autor alumno">
+                        <input type="text" name="Director" id="Director" placeholder="Director">
+        <button type="submit">Buscar</button>	
+        <br><br>
+        <form class="formulario-busqueda" id="buscar-CD">
+                        <input type="text" name="Titulo_cd" id="Titulo_cd" placeholder="T&iacute;tulo" value="sam" disabled>
+                        <input type="text" name="Num_cd" id="Num_cd" placeholder="N&uacute;mero de CD">
+                        <button type="submit">Buscar</button>
+                    </form>	
+		</div>
+	</main>
+	<div>
+		<footer>
+			<p>	Escuela Superior de Computo <br>
+				Av. Juan de Dios Bátiz S/N, Nueva Industrial Vallejo, C.P.07738 Ciudad de México, CDMX
+		</p>
+		</footer>
+	</div>
+	<script type="text/javascript" src="JS/buscar-libro-avanzada.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+	<meta charset="UTF-8">
+	<title>SBDESCOM - Login</title>
+
+	<link rel="stylesheet" type="text/css" href="CSS/header.css">
+	<link rel="stylesheet" type="text/css" href="CSS/nav.css">
+	<link rel="stylesheet" type="text/css" href="CSS/menu-buscar.css">
+	<link rel="stylesheet" type="text/css" href="CSS/main-login.css">
+	<link rel="stylesheet" type="text/css" href="CSS/footer.css">
+
+    <script src="JS/menu-nav.js" language="javascript" type="text/javascript"></script>
+
+	<style type="text/css">
+		body{
+			background: url("img/fondo-body.gif");
+			height: auto;
+			margin: 0;
+			width: 100%;
+		}
+	</style>
+
+</head>
+<body>
+	<header>
+		<img src="img/logo-ipn.png">
+		<img src="img/logo-escom.png">
+		<div>
+			<h1>Sistema Bibliotecario Digital de la ESCOM</h1>
+			<h1>SBDESCOM</h1>
+		</div>
+	</header>
+
+	<nav class="navegador">
+        <ul>
+            <li onclick="esconderAparecerMenu()">
+                <p>Buscar libro</p>
+                <img src="img/icono-buscar.png">
+            </li>
+            <div>
+                <li>
+                    <a href="login.html">Iniciar sesi&oacute;n</a>
+                </li>
+                <li>
+                    <a href="register.html">Registrarse</a>
+                </li>
+                <li>
+                    <a href="politicaOperacionBiblioteca.pdf" target="blank">Reglamento</a>
+                </li>
+                <li>
+                    <a href="#" target="blank">Documentaci&oacute;n</a>
+                </li>
+                <li>
+                    <a href="#">Acerca</a>
+                </li>
+            </div>
+        </ul>
+    </nav>
+    
+    <aside class="menu esconder-menu" id="menu">
+        <ul>
+            <li class="tipo-busqueda">
+                <p onclick="esconderAparecer('submenu-libro')">Libro</p>
+                <div class="esconder" id="submenu-libro">
+                     <form id="buscar-libro">
+                        <input type="text" name="titulo-libro"    placeholder="T&iacute;tulo">
+                        <input type="text" name="autor-libro"     placeholder="Autor">
+                        <input type="text" name="editorial-libro" placeholder="Editorial">
+                        <input type="text" name="isbn"            placeholder="ISBN">
+                        <button type="submit">Buscar</button>
+                    </form>
+                    <img src="img/busqueda-libros.png">
+                    <div id="lib"></div>
+                </div>
+            </li>
+            <li class="tipo-busqueda">
+                <p onclick="esconderAparecer('submenu-tt')">Trabajo terminal</p>
+                <div class="esconder" id="submenu-tt">
+                    <form class="formulario-busqueda" id="buscar-TT">
+                        <input type="text" name="titulo-tt" placeholder="T&iacute;tulo">
+                        <input type="text" name="N_corto"   placeholder="Nombre corto">
+                        <input type="text" name="Num_tt"    placeholder="N&uacute;mero de TT">
+                        <input type="text" name="Autor_al"  placeholder="Autor alumno">
+                        <input type="text" name="Director"  placeholder="Director">
+                        <button type="submit">Buscar</button>
+                    </form>
+                    <img src="img/busqueda-tt.png">
+                    <div id="tt"></div>
+                </div>
+            </li>
+            <li class="tipo-busqueda">
+                <p onclick="esconderAparecer('submenu-cd')">CD</p>
+                <div class="esconder" id="submenu-cd">
+                    <form class="formulario-busqueda" id="buscar-CD">
+                        <input type="text" name="titulo-cd" placeholder="T&iacute;tulo">
+                        <input type="text" name="Num_cd"    placeholder="N&uacute;mero de CD">
+                        <button type="submit">Buscar</button>
+                    </form>
+                    <img src="img/busqueda-cd.png">
+                    <div id="cd"></div>
+                </div>
+            </li>
+        </ul>
+    </aside>
+	<main>
+		<section class="principal">
+			<div>
+				<h2>Bienvenido</h2>
+			</div>
+			<div>
+				<p class="texto">
+					Este sistema fue creado para poder agilizar el proceso de inscripción al servicio de biblioteca de la ESCOM, así como poder hacer uso del servicio de pr&eacute;stamos de libros que esta brinda.
+					Todo de manera sencilla y eficaz.
+				</p>
+			</div>
+			<div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>
+			Escuela Superior de C&oacute;mputo<br>
+			Av. Juan de Dios B&aacute;tiz S/N, Nueva Industrial Vallejo, C.P.07738 Ciudad de México, CDMX
+			<br><br>
+			&copy; Derechos reservados<br>
+		</p>
+	</footer>
+<script type="text/javascript" src="JS/usuario-externo.js"></script>
+</body>
+</html>

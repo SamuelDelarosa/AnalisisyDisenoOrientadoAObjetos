@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <title>SBDESCOM - Perfil Administrador</title>
+
+    <link rel="stylesheet" type="text/css" href="CSS/header.css">
+    <link rel="stylesheet" type="text/css" href="CSS/nav_p.css">
+    <link rel="stylesheet" type="text/css" href="CSS/menu-buscar.css">
+    <link rel="stylesheet" type="text/css" href="CSS/main-perfil_21.css">
+    <link rel="stylesheet" type="text/css" href="CSS/footer.css">
+
+    <script src="JS/menu-nav.js" language="javascript" type="text/javascript"></script>
+
+    <style type="text/css">
+        body{
+            background: url("img/fondo-body.gif");
+            height: auto;
+            margin: 0;
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <img src="img/logo-ipn.png">
+        <img src="img/logo-escom.png">
+        <div>
+            <h1>Sistema Bibliotecario Digital de la ESCOM</h1>
+            <h1>SBDESCOM</h1>
+        </div>
+    </header>
+
+ <nav class="navegador">
+        <ul>
+            <div>
+                <li>
+                    <a href="inicio-usuario.html">Perfil</a>
+                </li>
+                <li>
+                    <a href="consulta-material-usuario.html">Consulta de material</a>
+                </li>
+                <li>
+                    <a href="historial-de-prestamo.html">Historial de pr&eacute;stamos</a>
+                </li>
+                <li>
+                    <a href="politicaOperacionBiblioteca.pdf" target="blank">Reglamento</a>
+                </li>
+                <li>
+                    <a href="#" target="blank">Documentaci&oacute;n</a>
+                </li>
+                <li>
+                    <a href="#">Acerca</a>
+                </li>
+            </div>
+            <li id="salir-p">
+                <p></p>
+                <img src="img/icono-logout.png">
+            </li>
+        </ul>
+    </nav>
+    <main class="principal">
+        <div>
+        </div>
+        <div>
+            <form id="buscar-material">
+                <p>ID del material:</p>
+                <input type="text" name="buscar-mat" placeholder="ID de petici&oacute;n">
+                <select name="tipo" id="tipo">
+                        <option value="1">Libro</option>
+                        <option value="2">TT</option>
+                        <option value="3">CD</option>
+                </select>
+                <button type="submit">Buscar</button>
+            </form>
+            <div>
+                <form id="prestamo-r">
+                    <div id="Boleta">
+                        <p>Boleta:</p>
+                        <input type="text" name="" >
+                    </div>
+                    <div id="Nombre">
+                        <p>Nombre:</p>
+                        <input type="text" name="" >
+                    </div>
+                    <div id="ap">
+                        <p>Apellido paterno:</p>
+                        <input type="text" name="">
+                    </div>
+                    <div id="am">
+                        <p>Apellido materno:</p>
+                        <input type="text" name="">
+                    </div>
+                    <div id="correo">
+                        <p>Correo electr&oacute;nico:</p>
+                        <input type="text" name="">
+                    </div>
+                    <div id="telefono">
+                        <p>Tel&eacute;fono:</p>
+                        <input type="text" name="">
+                    </div>
+                    <div id="contrasena">
+                        <p>Contrase&ntilde;a:</p>
+                        <input type="text" name="">
+                    </div>
+                    <div id="tipo">
+                        <p>Tipo de cuenta:</p>
+                        <input type="text" name="">
+                    </div>
+                    <div>
+                        <button type="submit" class="mostrar-boton">Registrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            Escuela Superior de C&oacute;mputo<br>
+            Av. Juan de Dios B&aacute;tiz S/N, Nueva Industrial Vallejo, C.P.07738 Ciudad de México, CDMX
+            <br><br>
+            &copy; Derechos reservados<br>
+        </p>
+    </footer>
+    <script type="text/javascript" src="JS/apartar-material.js"></script>
+    <script type="text/javascript" src="JS/salir.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+	<meta charset="UTF-8">
+	<title>SBDESCOM - Aceptaci&oacute;n de solicitud</title>
+
+	<link rel="stylesheet" type="text/css" href="CSS/header.css">
+	<link rel="stylesheet" type="text/css" href="CSS/nav_p.css">
+	<link rel="stylesheet" type="text/css" href="CSS/menu-buscar.css">
+	<link rel="stylesheet" type="text/css" href="CSS/main-solicitud.css">
+	<link rel="stylesheet" type="text/css" href="CSS/footer.css">
+
+    <script src="JS/menu-nav.js" language="javascript" type="text/javascript"></script>
+
+	<style type="text/css">
+		body{
+			background: url("img/fondo-body.gif");
+			height: auto;
+			margin: 0;
+			width: 100%;
+		}
+	</style>
+
+</head>
+<body>
+	<header>
+		<img src="img/logo-ipn.png">
+		<img src="img/logo-escom.png">
+		<div>
+			<h1>Sistema Bibliotecario Digital de la ESCOM</h1>
+			<h1>SBDESCOM</h1>
+		</div>
+	</header>
+
+	<nav class="navegador">
+        <ul>
+            <div>
+                <li>
+                    <a href="inicio-bibliotecario.html">Perfil</a>
+                </li>
+                <li>
+                    <a href="alta_material.html">Dar de alta material</a>
+                </li>
+                <li>
+                    <a href="modificacion-usuario-biblio.html">Modificar Usuarios</a>
+                </li>
+                <li>
+                    <a href="libros-en-uso-biblio.html">Material en uso</a>
+                </li>
+                <li>
+                    <a href="politicaOperacionBiblioteca.pdf" target="blank">Reglamento</a>
+                </li>
+                <li>
+                    <a href="#" target="blank">Documentaci&oacute;n</a>
+                </li>
+                <li>
+                    <a href="#">Acerca</a>
+                </li>
+            </div>
+            <li id="salir-p">
+                <p></p>
+                <img src="img/icono-logout.png">
+            </li>
+        </ul>
+    </nav>
+    
+    <aside class="menu esconder-menu" id="menu">
+        <ul>
+            <li class="tipo-busqueda">
+                <p onclick="esconderAparecer('submenu-libro')">Libro</p>
+                <div class="esconder" id="submenu-libro">
+                    <form>
+                        <input type="text" name="" placeholder="T&iacute;tulo">
+                        <input type="text" name="" placeholder="Autor">
+                        <input type="text" name="" placeholder="Editorial">
+                        <input type="text" name="" placeholder="ISBN">
+                        <button>Buscar</button>
+                    </form>
+                    <img src="img/busqueda-libros.png">
+                </div>
+            </li>
+            <li class="tipo-busqueda">
+                <p onclick="esconderAparecer('submenu-tt')">Trabajo terminal</p>
+                <div class="esconder" id="submenu-tt">
+                    <form>
+                        <input type="text" name="" placeholder="T&iacute;tulo">
+                        <input type="text" name="" placeholder="Nombre corto">
+                        <input type="text" name="" placeholder="N&uacute;mero de TT">
+                        <input type="text" name="" placeholder="Autor alumno">
+                        <input type="text" name="" placeholder="Director">
+                        <button>Buscar</button>
+                    </form>
+                    <img src="img/busqueda-tt.png">
+                </div>
+            </li>
+            <li class="tipo-busqueda">
+                <p onclick="esconderAparecer('submenu-cd')">CD</p>
+                <div class="esconder" id="submenu-cd">
+                    <form>
+                        <input type="text" name="" placeholder="T&iacute;tulo">
+                        <input type="text" name="" placeholder="N&uacute;mero de CD">
+                        <button>Buscar</button>
+                    </form>
+                    <img src="img/busqueda-cd.png">
+                </div>
+            </li>
+        </ul>
+    </aside>
+
+	<main class="principal">
+	    <div>
+	    </div>
+	    <div>
+            <div>
+                <form id="prueba">
+                    <p>Id de la petici&oacute;n:</p>
+                    <input type="text" name="texto" placeholder="ID de petici&oacute;n">
+                    <button type="submit">Aceptar</button>
+                </form>
+            </div>
+            <div>
+                <table id="perfil" class="tabla">
+                    <thead id="tit-tabla-1">
+                        
+                    </thead>
+
+                    <tbody id="cuerpo-tabla-1">
+                        
+                    </tbody>
+                </table>
+            </div>
+	    </div>
+        <div>
+        </div>
+	</main>
+
+	<footer>
+		<p>
+			Escuela Superior de C&oacute;mputo<br>
+			Av. Juan de Dios B&aacute;tiz S/N, Nueva Industrial Vallejo, C.P.07738 Ciudad de México, CDMX
+			<br><br>
+			&copy; Derechos reservados<br>
+		</p>
+	</footer>
+	<script type="text/javascript" src="JS/aceptacion-usuario-biblio.js"></script>
+	<script type="text/javascript" src="JS/aceptacion2-usuario-biblio.js"></script>
+    <script type="text/javascript" src="JS/salir.js"></script>
+</body>
+</html>

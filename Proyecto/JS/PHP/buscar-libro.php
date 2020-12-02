@@ -1,0 +1,84 @@
+<?php
+	require 'conexion.php';
+	$nombre_lib=$_POST['titulo-libro'];
+	$nombre_autor=$_POST['autor-libro'];
+	$nombre_edit=$_POST['editorial-libro'];
+	$codigo=$_POST['isbn'];
+	if (empty($nombre_lib)&&empty($nombre_autor)&&empty($nombre_edit)&&empty($codigo)){
+		echo json_encode('Llena algun campo');
+	}else if(!empty($nombre_lib)&&empty($nombre_autor)&&empty($nombre_edit)&&empty($codigo)){
+		$nombre_lib_like="%{$nombre_lib}%";
+	 	$sql='select idLibro, nombre from libro where nombre like :Titulo';
+	 	$resultado=$base->prepare($sql);
+	 	$resultado->bindParam(":Titulo",$nombre_lib_like, PDO::PARAM_STR);
+	 	$resultado->execute();
+	 	//$res= $resultado->fetch(PDO::FETCH_ASSOC);
+	 	$json=array();
+	 	while($res= $resultado->fetch(PDO::FETCH_ASSOC)){
+	 		$json[]= array(
+	 			'idLibro' => $res['idLibro'],
+	 			'nombre' => $res['nombre']);
+	 	}
+	 	if(!empty($json)){
+			//echo $res['idLibro'];
+			echo json_encode($json);
+	 	}else{
+	 		echo json_encode("Libro no existe");
+	 	}
+
+	 }else if(empty($nombre_lib)&&!empty($nombre_autor)&&empty($nombre_edit)&&empty($codigo)){
+	 	$nombre_autor_like="%{$nombre_autor}%";
+	 	$sql='select idLibro, nombre from libro where autor like :autor';
+	 	$resultado=$base->prepare($sql);
+	 	$resultado->bindParam(":autor",$nombre_autor_like, PDO::PARAM_STR);
+	 	$resultado->execute();
+	 	$json=array();
+	 	while($res= $resultado->fetch(PDO::FETCH_ASSOC)){
+	 		$json[]= array(
+	 			'idLibro' => $res['idLibro'],
+	 			'nombre' => $res['nombre']);
+	 	}
+	 	if(!empty($json)){
+			//echo $res['idLibro'];
+			echo json_encode($json);
+	 	}else{
+	 		echo json_encode("Libro no existe");
+	 	}
+	 }else if(empty($nombre_lib)&&empty($nombre_autor)&&!empty($nombre_edit)&&empty($codigo)){
+	 	$nombre_editorial_like="%{$nombre_edit}%";
+	 	$sql='select idLibro, nombre from libro where editorial like :Editorial ';
+	 	$resultado=$base->prepare($sql);
+	 	$resultado->bindParam(":Editorial",$nombre_editorial_like, PDO::PARAM_STR);
+	 	$resultado->execute();
+	 	$json=array();
+	 	while($res= $resultado->fetch(PDO::FETCH_ASSOC)){
+	 		$json[]= array(
+	 			'idLibro' => $res['idLibro'],
+	 			'nombre' => $res['nombre']);
+	 	}
+	 	if(!empty($json)){
+			//echo $res['idLibro'];
+			echo json_encode($json);
+	 	}else{
+	 		echo json_encode("Editorial no existe");
+	 	}
+	 }else if(empty($nombre_lib)&&empty($nombre_autor)&&empty($nombre_edit)&&!empty($codigo)){
+	 	$sql='select idLibro, nombre from libro where idLibro = :codigo ';
+	 	$resultado=$base->prepare($sql);
+	 	$resultado->bindParam(":codigo",$codigo);
+	 	$resultado->execute();
+	 	$res= $resultado->fetch(PDO::FETCH_ASSOC);
+	 	$json=array(
+	 		'idLibro'=> $res['idLibro'],
+			'nombre'=> $res['nombre']
+			);
+	 	if(!empty($json)){
+			//echo $res['idLibro'];
+			echo json_encode($json);
+	 	}else{
+	 		echo json_encode("Libro no existe");
+	 	}
+	}
+
+
+?>

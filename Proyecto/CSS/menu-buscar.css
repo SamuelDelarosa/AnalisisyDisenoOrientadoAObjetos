@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2|Montserrat|Montserrat');
+
+.menu{
+    position: absolute;
+    height: auto;
+    width: auto;
+}
+
+.menu > ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tipo-busqueda{
+    height: auto;
+    width: 100%;
+}
+
+.tipo-busqueda p{
+    background: #3F8CB3;
+    color: #EEE;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 5px;
+    padding-left: 5%;
+    text-shadow: 0 0 rgb(0, 0, 0, 0);
+    transition-property: color, text-shadow, padding-left;
+    transition-duration: 0.5s;
+}
+
+.tipo-busqueda:nth-child(n+1) p{
+    border-top: solid 1px #003388;
+}
+
+.tipo-busqueda p:hover{
+    padding-left: 10%;
+    text-shadow: 0 2px 2px #000;
+}
+
+.esconder{
+    display: none;
+}
+
+.aparecer{
+    background: #50B3E5;
+    display: flex;
+    justify-content:space-around;
+}
+
+.tipo-busqueda > div > form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+}
+
+.tipo-busqueda input, button{
+    margin-top: 10px;
+}
+
+.tipo-busqueda > div > img{
+    display: flex;
+    height: 20%;
+    margin: auto;
+    padding: 15px;
+    width: 20%;
+}
+
+.tipo-busqueda input{
+    background: #EEE;
+    border: solid 1px #3F8CB3;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.8em;
+    height: 1.5em;
+    padding-left: 15px;
+}
+
+.tipo-busqueda button{
+    background: #3F8CB3;
+    border: solid 1px;
+    border-radius: 5px;
+    color: #EEE;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.9em;
+    margin: 10px auto;
+    outline: none;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 80%;
+}
+
+.tipo-busqueda button:hover{
+    box-shadow: inset 0px -10px 25px -10px rgba(0, 0, 0, 0.4);
+}

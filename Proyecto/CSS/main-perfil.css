@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2|Montserrat');
+
+.principal{
+    background: linear-gradient(to right, #EEE, #C1CCC6);
+    border-radius: 15px;
+    box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.principal > div:first-child{
+    background: linear-gradient(to right, #1AA658, #7BD8A4);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 2.5em;
+}
+
+.principal > div:nth-child(2){
+    display: flex;
+    padding: 2em;
+}
+
+.principal > div:nth-child(2) > div:first-child{
+    display: flex;
+    height: auto;
+    width: 50%;
+}
+
+.principal > div:nth-child(2) > div:first-child > div{
+    display: flex;
+    background: #fff;
+    border-radius: 50%;
+    height: 16em;
+    margin: auto;
+    width: 16em;
+}
+
+.principal > div:nth-child(2) > div:first-child > div > img{
+    border-radius: 50%;
+    height: 15em;
+    margin: auto;
+    width: 15em;
+}
+
+.principal > div:nth-child(2) > div:last-child{
+    margin: auto;
+    width: 50%;
+}
+
+.principal > div:nth-child(2) > div:last-child div{
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    margin: 0.3em 0;
+    width: 100%;
+}
+
+.principal > div:nth-child(2) > div:last-child div > p{
+    margin: 0.5em 0;
+}
+
+.principal > div:nth-child(2) > div:last-child div > p:first-child{
+    width: 30%;
+}
+
+.principal > div:nth-child(2) > div:last-child div > p:last-child{
+    background: #7BD8A4;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.principal > div:last-child{
+    background: linear-gradient(to right, #1AA658, #7BD8A4);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 2.5em;
+}
+
+@media screen and (max-width: 1024px){
+    .principal > div:nth-child(2){
+        flex-direction: column;
+    }
+    
+    .principal > div:nth-child(2) > div:first-child{
+        width: auto;
+        margin-bottom: 1em;
+    }
+    
+    .principal > div:nth-child(2) > div:last-child{
+        width: 100%;
+    }
+}

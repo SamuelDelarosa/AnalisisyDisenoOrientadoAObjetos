@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2|Montserrat|Montserrat');
+
+header{
+    background: rgb(255, 255, 255, 0.65);
+    height: auto;
+    width: 100%;
+    top: 0;
+}
+
+header img:first-child{
+    float: left;
+    height: 100px;
+    margin: 1.51%;
+    margin-left: 10%;
+    width: auto;
+}
+
+header img:nth-child(2){
+    float: right;
+    height: 100px;
+    margin: 1.51%;
+    margin-right: 10%;;
+    width: auto;
+}
+
+header div{
+    float: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+}
+
+header div h1{
+	background: linear-gradient(to right, #891e35, #0088ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 3px 3px rgb(0,0,0,0.2);
+}
+
+header div h1:nth-child(2){
+	margin-top: 0;
+}
+
+@media screen and (max-width: 1024px){
+    header{
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    header img:first-child{
+        display: none;
+    }
+    
+    header img:nth-child(2){
+        height: 60px;
+        margin: 5px 0 5px 20%;
+    }
+    
+    header div{
+        margin: auto;
+    }
+    
+    header div h1:first-child{
+        display: none;
+    }
+    
+    header div h1:nth-child(2){
+        margin-bottom: 0;
+    }
+}
